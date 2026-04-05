@@ -404,7 +404,7 @@
   <header class="site-header">
     <div class="ornament">✦ Mô Hình LEP ✦</div>
     <h1 class="site-title">Hành Trình <em>Nội Tâm</em></h1>
-    <p class="site-subtitle">Khảo sát 8 trụ cột — Nhận thức · Sự nghiệp · Hành động · Sứ mệnh · Cảm xúc · Giao tiếp · Tập trung · Hiểu biết</p>
+    <p class="site-subtitle">Khảo sát 8 trụ cột — Nhận Biết · Kỷ Luật · Quyết Đoán · Tài Chính · Giao Tiếp · Hành Động · Niềm Tin · Cảm Xúc</p>
   </header>
 
   <div id="intro">
@@ -412,14 +412,14 @@
       Khảo sát này giúp bạn nhìn nhận mức độ phát triển nội tâm qua <strong style="color:var(--lotus-light)">8 trụ cột</strong> của mô hình LEP. Mỗi câu hỏi có 4 mức độ — hãy chọn đáp án phản ánh trung thực nhất trạng thái hiện tại của bạn.
     </p>
     <div class="intro-pillars">
-      <div class="pillar-chip"><span class="pillar-chip-name">Nhận thức</span></div>
-      <div class="pillar-chip"><span class="pillar-chip-name">Sự nghiệp</span></div>
-      <div class="pillar-chip"><span class="pillar-chip-name">Hành động</span></div>
-      <div class="pillar-chip"><span class="pillar-chip-name">Sứ mệnh</span></div>
-      <div class="pillar-chip"><span class="pillar-chip-name">Cảm xúc</span></div>
-      <div class="pillar-chip"><span class="pillar-chip-name">Giao tiếp</span></div>
-      <div class="pillar-chip"><span class="pillar-chip-name">Tập trung</span></div>
-      <div class="pillar-chip"><span class="pillar-chip-name">Hiểu biết</span></div>
+      <div class="pillar-chip"><span class="pillar-chip-name">Nhận Biết</span></div>
+      <div class="pillar-chip"><span class="pillar-chip-name">Kỷ Luật</span></div>
+      <div class="pillar-chip"><span class="pillar-chip-name">Quyết Đoán</span></div>
+      <div class="pillar-chip"><span class="pillar-chip-name">Tài Chính</span></div>
+      <div class="pillar-chip"><span class="pillar-chip-name">Giao Tiếp</span></div>
+      <div class="pillar-chip"><span class="pillar-chip-name">Hành Động</span></div>
+      <div class="pillar-chip"><span class="pillar-chip-name">Niềm Tin</span></div>
+      <div class="pillar-chip"><span class="pillar-chip-name">Cảm Xúc</span></div>
     </div>
     <button class="btn btn-primary" onclick="goToInfo()" style="align-self:flex-start;font-size:13px;letter-spacing:2px;padding:16px 40px;">
       Bắt Đầu Khảo Sát
@@ -523,7 +523,7 @@
 <script>
 const sections = [
   {
-    id: 1, name: "Nhận thức", tag: "Quan sát · Ý thức",
+    id: 1, name: "Nhận Biết", tag: "Quan sát · Ý thức",
     questions: [
       {
         text: "Khi nhận tin nhắn vỏn vẹn chữ \"Ừ\", phản ứng đầu tiên của bạn là:",
@@ -546,7 +546,53 @@ const sections = [
     ]
   },
   {
-    id: 2, name: "Sự nghiệp", tag: "Giá trị · Sáng tạo",
+    id: 2, name: "Kỷ Luật", tag: "Cấu trúc · Định tâm",
+    questions: [
+      {
+        text: "Khả năng tập trung của bạn khi làm việc sâu (Deep Work):",
+        options: [
+          "Liên tục bị xao nhãng bởi thông báo, mạng xã hội (dưới 5 phút/lần).",
+          "Cố gắng tập trung nhưng tâm trí hay \"đi chơi\", phải nỗ lực lắm mới quay lại được.",
+          "Có phương pháp (như Pomodoro) và duy trì được khoảng 30-45 phút ổn định.",
+          "Trạng thái \"Dòng chảy\" (Flow), quên thời gian và không bị tác động bởi môi trường."
+        ]
+      },
+      {
+        text: "Khi đối diện với một thử thách vật lý khắc nghiệt (như leo núi, lái xe địa hình):",
+        options: [
+          "Hoảng loạn, nhịp thở dồn dập, mất kiểm soát hành vi.",
+          "Gồng cứng người, lo lắng nhưng vẫn cố gắng hoàn thành theo bản năng.",
+          "Điều tiết được nhịp thở, quan sát được sự sợ hãi và điều khiển cơ thể theo kỹ thuật.",
+          "Vững chãi như núi, tâm và thân hợp nhất, di chuyển nhịp nhàng với địa hình."
+        ]
+      }
+    ]
+  },
+  {
+    id: 3, name: "Quyết Đoán", tag: "Tư duy · Tri thức",
+    questions: [
+      {
+        text: "Cách bạn giải thích một vấn đề phức tạp cho người khác:",
+        options: [
+          "Nói vòng vo, dùng thuật ngữ khó hiểu để che giấu sự mơ hồ của mình.",
+          "Nhắc lại nguyên văn lý thuyết đã học được từ sách vở.",
+          "Có sơ đồ, mô hình và ví dụ thực tế giúp người nghe nắm được cốt lõi.",
+          "Biến kiến thức thành những câu chuyện ẩn dụ đơn giản, ai cũng có thể \"thấy\" ngay."
+        ]
+      },
+      {
+        text: "Thái độ của bạn đối với những thất bại lặp lại trong quá khứ:",
+        options: [
+          "Than thân trách phận hoặc đổ lỗi cho hoàn cảnh, thời thế.",
+          "Buồn bã nhưng tự nhủ lần sau sẽ may mắn hơn.",
+          "Phân tích dữ liệu, tìm ra lỗ hổng cấu trúc và thay đổi chiến thuật.",
+          "Nhìn thấy quy luật (Pattern) vận hành của bản ngã và chuyển hóa tận gốc."
+        ]
+      }
+    ]
+  },
+  {
+    id: 4, name: "Tài Chính", tag: "Giá trị · Sáng tạo",
     questions: [
       {
         text: "Động lực thực sự khiến bạn làm công việc hiện tại:",
@@ -569,76 +615,7 @@ const sections = [
     ]
   },
   {
-    id: 3, name: "Hành động", tag: "Nỗ lực · Kỷ luật",
-    questions: [
-      {
-        text: "Phản ứng của bạn khi kế hoạch bị đổ vỡ hoàn toàn:",
-        options: [
-          "Buông xuôi, bỏ cuộc và chìm đắm trong sự thất vọng.",
-          "Đợi một thời gian cho nguôi ngoai rồi mới dám bắt đầu lại.",
-          "Tìm phương án B ngay lập tức và nỗ lực thực thi để bù đắp thiệt hại.",
-          "Thản nhiên đón nhận, coi đó là dữ liệu để điều chỉnh hành trình, hành động ngay không do dự."
-        ]
-      },
-      {
-        text: "Kỷ luật bản thân trong việc nâng cấp chính mình:",
-        options: [
-          "Không có nhu cầu học hỏi, hài lòng với những gì đang có.",
-          "Có ý định học nhưng luôn trì hoãn vì \"không có thời gian\".",
-          "Lập thời khóa biểu và ép mình thực hiện dù có mệt mỏi.",
-          "Học hỏi là hơi thở, việc rèn luyện diễn ra tự nhiên trong mọi hoạt động sống."
-        ]
-      }
-    ]
-  },
-  {
-    id: 4, name: "Sứ mệnh", tag: "Ý nghĩa · Định hướng",
-    questions: [
-      {
-        text: "Bạn định vị mình là ai trong hệ sinh thái xã hội này?",
-        options: [
-          "Một nạn nhân của hoàn cảnh, luôn bị xô đẩy bởi dòng đời.",
-          "Một người bình thường cố gắng tìm kiếm hạnh phúc cá nhân.",
-          "Một chiến binh nỗ lực để đạt được những mục tiêu lớn lao.",
-          "Một người dẫn dắt (Life Guide) góp phần hồi sinh sự sống xung quanh."
-        ]
-      },
-      {
-        text: "Khi nghĩ về cái chết hoặc sự kết thúc:",
-        options: [
-          "Sợ hãi, né tránh và không dám đối diện.",
-          "Thấy hoang mang vì chưa làm được gì đáng kể cho đời.",
-          "Chấp nhận và cố gắng hoàn thành nốt các mục tiêu còn dang dở.",
-          "Tự tại, vì mỗi phút giây hiện tại đã là một đời sống trọn vẹn và ý nghĩa."
-        ]
-      }
-    ]
-  },
-  {
-    id: 5, name: "Cảm xúc", tag: "Cảm nhận · Nội tâm",
-    questions: [
-      {
-        text: "Khi đứng trước một khung cảnh thiên nhiên hùng vĩ tại Mũi Dinh:",
-        options: [
-          "Việc đầu tiên là lôi điện thoại ra chụp ảnh, quay phim để đăng mạng xã hội.",
-          "Thấy đẹp nhưng tâm trí vẫn vương vấn những email chưa trả lời.",
-          "Dành vài phút hít thở, cảm nhận gió cát bằng mọi giác quan rồi mới chụp ảnh.",
-          "Hiện diện trọn vẹn, tan chảy vào không gian, không còn nhu cầu ghi hình lại."
-        ]
-      },
-      {
-        text: "Khả năng xử lý cảm xúc tiêu cực (giận dữ, lo âu):",
-        options: [
-          "Bị cảm xúc cuốn đi, có những hành vi hoặc lời nói gây tổn thương.",
-          "Cố gắng kìm nén, \"gồng\" để tỏ ra mình ổn nhưng bên trong vẫn cháy âm ỉ.",
-          "Nhận diện được cảm xúc ngay khi nó khởi phát và dùng hơi thở để làm dịu.",
-          "Quan sát cảm xúc như một vị khách ghé thăm, thấu hiểu nguyên nhân và mỉm cười chào nó."
-        ]
-      }
-    ]
-  },
-  {
-    id: 6, name: "Giao tiếp", tag: "Kết nối · Lắng nghe",
+    id: 5, name: "Giao Tiếp", tag: "Kết nối · Lắng nghe",
     questions: [
       {
         text: "Trạng thái của bạn khi lắng nghe người khác:",
@@ -661,47 +638,70 @@ const sections = [
     ]
   },
   {
-    id: 7, name: "Tập trung", tag: "Cấu trúc · Định tâm",
+    id: 6, name: "Hành Động", tag: "Nỗ lực · Kỷ luật",
     questions: [
       {
-        text: "Khả năng tập trung của bạn khi làm việc sâu (Deep Work):",
+        text: "Phản ứng của bạn khi kế hoạch bị đổ vỡ hoàn toàn:",
         options: [
-          "Liên tục bị xao nhãng bởi thông báo, mạng xã hội (dưới 5 phút/lần).",
-          "Cố gắng tập trung nhưng tâm trí hay \"đi chơi\", phải nỗ lực lắm mới quay lại được.",
-          "Có phương pháp (như Pomodoro) và duy trì được khoảng 30–45 phút ổn định.",
-          "Trạng thái \"Dòng chảy\" (Flow), quên thời gian và không bị tác động bởi môi trường."
+          "Buông xuôi, bỏ cuộc và chìm đắm trong sự thất vọng.",
+          "Đợi một thời gian cho nguôi ngoai rồi mới dám bắt đầu lại.",
+          "Tìm phương án B ngay lập tức và nỗ lực thực thi để bù đắp thiệt hại.",
+          "Thản nhiên đón nhận, coi đó là dữ liệu để điều chỉnh hành trình, hành động ngay không do dự."
         ]
       },
       {
-        text: "Khi đối diện với một thử thách vật lý khắc nghiệt (như leo núi, lái xe địa hình):",
+        text: "Kỷ luật bản thân trong việc nâng cấp chính mình:",
         options: [
-          "Hoảng loạn, nhịp thở dồn dập, mất kiểm soát hành vi.",
-          "Gồng cứng người, lo lắng nhưng vẫn cố gắng hoàn thành theo bản năng.",
-          "Điều tiết được nhịp thở, quan sát được sự sợ hãi và điều khiển cơ thể theo kỹ thuật.",
-          "Vững chãi như núi, tâm và thân hợp nhất, di chuyển nhịp nhàng với địa hình."
+          "Không có nhu cầu học hỏi, hài lòng với những gì đang có.",
+          "Có ý định học nhưng luôn trì hoãn vì \"không có thời gian\".",
+          "Lập thời khóa biểu và ép mình thực hiện dù có mệt mỏi.",
+          "Học hỏi là hơi thở, việc rèn luyện diễn ra tự nhiên trong mọi hoạt động sống."
         ]
       }
     ]
   },
   {
-    id: 8, name: "Hiểu biết", tag: "Tư duy · Tri thức",
+    id: 7, name: "Niềm Tin", tag: "Ý nghĩa · Định hướng",
     questions: [
       {
-        text: "Cách bạn giải thích một vấn đề phức tạp cho người khác:",
+        text: "Bạn định vị mình là ai trong hệ sinh thái xã hội này?",
         options: [
-          "Nói vòng vo, dùng thuật ngữ khó hiểu để che giấu sự mơ hồ của mình.",
-          "Nhắc lại nguyên văn lý thuyết đã học được từ sách vở.",
-          "Có sơ đồ, mô hình và ví dụ thực tế giúp người nghe nắm được cốt lõi.",
-          "Biến kiến thức thành những câu chuyện ẩn dụ đơn giản, ai cũng có thể \"thấy\" ngay."
+          "Một nạn nhân của hoàn cảnh, luôn bị xô đẩy bởi dòng đời.",
+          "Một người bình thường cố gắng tìm kiếm hạnh phúc cá nhân.",
+          "Một chiến binh nỗ lực để đạt được những mục tiêu lớn lao.",
+          "Một người dẫn dắt (Life Guide) góp phần hồi sinh sự sống xung quanh."
         ]
       },
       {
-        text: "Thái độ của bạn đối với những thất bại lặp lại trong quá khứ:",
+        text: "Khi nghĩ về cái chết hoặc sự kết thúc:",
         options: [
-          "Than thân trách phận hoặc đổ lỗi cho hoàn cảnh, thời thế.",
-          "Buồn bã nhưng tự nhủ lần sau sẽ may mắn hơn.",
-          "Phân tích dữ liệu, tìm ra lỗ hổng cấu trúc và thay đổi chiến thuật.",
-          "Nhìn thấy quy luật (Pattern) vận hành của bản ngã và chuyển hóa tận gốc."
+          "Sợ hãi, né tránh và không dám đối diện.",
+          "Thấy hoang mang vì chưa làm được gì đáng kể cho đời.",
+          "Chấp nhận và cố gắng hoàn thành nốt các mục tiêu còn dang dở.",
+          "Tự tại, vì mỗi phút giây hiện tại đã là một đời sống trọn vẹn và ý nghĩa."
+        ]
+      }
+    ]
+  },
+  {
+    id: 8, name: "Cảm Xúc", tag: "Cảm nhận · Nội tâm",
+    questions: [
+      {
+        text: "Khi đứng trước một khung cảnh thiên nhiên hùng vĩ tại Mũi Dinh:",
+        options: [
+          "Việc đầu tiên là lôi điện thoại ra chụp ảnh, quay phim để đăng mạng xã hội.",
+          "Thấy đẹp nhưng tâm trí vẫn vương vấn những email chưa trả lời.",
+          "Dành vài phút hít thở, cảm nhận gió cát bằng mọi giác quan rồi mới chụp ảnh.",
+          "Hiện diện trọn vẹn, tan chảy vào không gian, không còn nhu cầu ghi hình lại."
+        ]
+      },
+      {
+        text: "Khả năng xử lý cảm xúc tiêu cực (giận dữ, lo âu):",
+        options: [
+          "Bị cảm xúc cuốn đi, có những hành vi hoặc lời nói gây tổn thương.",
+          "Cố gắng kìm nén, \"gồng\" để tỏ ra mình ổn nhưng bên trong vẫn cháy âm ỉ.",
+          "Nhận diện được cảm xúc ngay khi nó khởi phát và dùng hơi thở để làm dịu.",
+          "Quan sát cảm xúc như một vị khách ghé thăm, thấu hiểu nguyên nhân và mỉm cười chào nó."
         ]
       }
     ]
@@ -929,35 +929,16 @@ function showResults() {
     return s;
   });
 
-  const radarOrder = [
-    "Nhận thức",
-    "Sự nghiệp",
-    "Hành động",
-    "Sứ mệnh",
-    "Cảm xúc",
-    "Giao tiếp",
-    "Tập trung",
-    "Hiểu biết"
-  ];
-
-  const scoreMap = {};
-  sections.forEach((sec, i) => {
-    scoreMap[sec.name] = scores[i];
-  });
-
-  const radarLabels = radarOrder;
-  const radarData = radarOrder.map(name => scoreMap[name] ?? 0);
-
   setTimeout(() => {
     const ctx = document.getElementById('radarChart').getContext('2d');
     if (window._radarChart) window._radarChart.destroy();
     window._radarChart = new Chart(ctx, {
       type: 'radar',
       data: {
-        labels: radarLabels,
+        labels: sections.map(s => s.name),
         datasets: [{
           label: 'Điểm số',
-          data: radarData,
+          data: scores,
           backgroundColor: 'rgba(201,151,90,0.15)',
           borderColor: 'rgba(201,151,90,0.85)',
           borderWidth: 2,
@@ -997,11 +978,7 @@ function showResults() {
             titleFont: { family: 'Be Vietnam Pro', size: 13, weight: '600' },
             bodyFont: { family: 'Be Vietnam Pro', size: 13 }, padding: 12,
             callbacks: {
-              title: (items) => {
-              const sectionName = radarLabels[items[0].dataIndex];
-              const sec = sections.find(s => s.name === sectionName);
-              return sec ? `${sec.name} · ${sec.tag}` : sectionName;
-            },
+              title: (items) => sections[items[0].dataIndex].name + ' · ' + sections[items[0].dataIndex].tag,
               label: (item) => `  Điểm: ${item.raw} / 8`
             }
           }
@@ -1014,7 +991,7 @@ function showResults() {
 }
 
 async function exportData() {
-  const scriptUrl = 'https://script.google.com/macros/s/AKfycbwSYXTmHcK1Lc2kzbgTWzP2UIYcglwXYPUQ1C2eIGDhZeyWZKlPjv__q5dSektw2jAF/exec';
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbxUPDwiJNECjYBdOMIeG3G7vPP7ZtYIgL3C-fmcUBbCNIVtiAh_VVOVVrXwiyMnbju0/exec';
 
   const scores = sections.map((sec, si) => {
     let s = 0;
