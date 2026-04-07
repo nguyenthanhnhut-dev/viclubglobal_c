@@ -404,7 +404,7 @@
   <header class="site-header">
     <div class="ornament">✦ Mô Hình LEP ✦</div>
     <h1 class="site-title">Hành Trình <em>Nội Tâm</em></h1>
-    <p class="site-subtitle">Khảo sát 8 trụ cột — Nhận Biết · Kỷ Luật · Quyết Đoán · Tài Chính · Giao Tiếp · Hành Động · Niềm Tin · Cảm Xúc</p>
+    <p class="site-subtitle">Khảo sát 8 chỉ số — Nhận Thức · Kỷ Luật · Phán Đoán · Bối Cảnh · Giao Tiếp · Năng Lực · Thực Thi · Mục Đích</p>
   </header>
 
   <div id="intro">
@@ -412,14 +412,14 @@
       Khảo sát này giúp bạn nhìn nhận mức độ phát triển nội tâm qua <strong style="color:var(--lotus-light)">8 trụ cột</strong> của mô hình LEP. Mỗi câu hỏi có 4 mức độ — hãy chọn đáp án phản ánh trung thực nhất trạng thái hiện tại của bạn.
     </p>
     <div class="intro-pillars">
-      <div class="pillar-chip"><span class="pillar-chip-name">Nhận Biết</span></div>
+      <div class="pillar-chip"><span class="pillar-chip-name">Nhận Thức</span></div>
       <div class="pillar-chip"><span class="pillar-chip-name">Kỷ Luật</span></div>
-      <div class="pillar-chip"><span class="pillar-chip-name">Quyết Đoán</span></div>
-      <div class="pillar-chip"><span class="pillar-chip-name">Tài Chính</span></div>
+      <div class="pillar-chip"><span class="pillar-chip-name">Phán Đoán</span></div>
+      <div class="pillar-chip"><span class="pillar-chip-name">Bối Cảnh</span></div>
       <div class="pillar-chip"><span class="pillar-chip-name">Giao Tiếp</span></div>
-      <div class="pillar-chip"><span class="pillar-chip-name">Hành Động</span></div>
-      <div class="pillar-chip"><span class="pillar-chip-name">Niềm Tin</span></div>
-      <div class="pillar-chip"><span class="pillar-chip-name">Cảm Xúc</span></div>
+      <div class="pillar-chip"><span class="pillar-chip-name">Năng Lực</span></div>
+      <div class="pillar-chip"><span class="pillar-chip-name">Thực Thi</span></div>
+      <div class="pillar-chip"><span class="pillar-chip-name">Mục Đích</span></div>
     </div>
     <button class="btn btn-primary" onclick="goToInfo()" style="align-self:flex-start;font-size:13px;letter-spacing:2px;padding:16px 40px;">
       Bắt Đầu Khảo Sát
@@ -507,7 +507,7 @@
     <div class="total-score-wrap" id="total-score-wrap">
       <div class="total-label">Tổng điểm LEP</div>
       <div class="total-number" id="total-number">0</div>
-      <div class="total-max">/ 64 điểm</div>
+      <div class="total-max">/ 128 điểm</div>
       <div class="total-message" id="total-message"></div>
     </div>
     <div class="radar-wrap">
@@ -523,185 +523,329 @@
 <script>
 const sections = [
   {
-    id: 1, name: "Nhận Biết", tag: "Quan sát · Ý thức",
+    id: 1, name: "Nhận Thức", tag: "Sống Deep · Hiện diện",
     questions: [
       {
-        text: "Khi nhận tin nhắn vỏn vẹn chữ \"Ừ\", phản ứng đầu tiên của bạn là:",
+        text: "Bạn cảm thấy mình thực sự hiện diện ở hiện tại được bao lâu?",
         options: [
-          "Khó chịu, cho rằng đối phương đang khinh thường hoặc giận mình.",
-          "Cảm thấy hơi bất an nhưng cố gắng gạt đi để làm việc tiếp.",
-          "Tự nhắc nhở bản thân rằng mình chưa đủ dữ liệu về bối cảnh của họ.",
-          "Thản nhiên, quan sát sự tò mò của mình mà không dán nhãn cảm xúc."
+          "Luôn sống trong quá khứ (tiếc nuối) hoặc tương lai (lo lắng).",
+          "Thỉnh thoảng nhớ lại mình đang làm gì nhưng dễ bị điện thoại hút hồn.",
+          "Duy trì được sự chú ý trong hầu hết các hoạt động thường ngày.",
+          "Luôn tỉnh táo trọn vẹn trong từng sát na, làm gì biết nấy cực rõ."
         ]
       },
       {
-        text: "Cách bạn thu thập thông tin trước một quyết định quan trọng:",
+        text: "Cách bạn lướt mạng xã hội mỗi ngày?",
         options: [
-          "Tin vào trực giác hoặc ý kiến của người đầu tiên mình hỏi.",
-          "Đọc vài nguồn tin quen thuộc và chọn cái mình thấy hợp lý nhất.",
-          "Chủ động tìm kiếm các nguồn tin đối lập để có cái nhìn đa chiều.",
-          "Quan sát toàn bộ bức tranh hệ thống, bao gồm cả những khoảng trắng dữ liệu."
+          "Lướt vô tri, xem xong không nhớ mình xem cái gì, trôi mất mấy tiếng đời.",
+          "Vừa xem vừa so sánh đời mình với người khác rồi đâm ra buồn bực.",
+          "Xem có chọn lọc, biết rõ lúc nào mình đang bị cuốn theo mấy cái kích thích.",
+          "Chỉ sử dụng như một công cụ học hỏi, không bao giờ bị nó \"dắt mũi\"."
+        ]
+      },
+      {
+        text: "Bạn đang ăn một bữa cơm ngon tuyệt vời.",
+        options: [
+          "Vừa ăn vừa cắm đầu vào điện thoại, nuốt vội chẳng biết vị gì.",
+          "Ăn nhưng đầu lại đang tính toán đống công việc bận rộn ngày mai.",
+          "Cảm nhận rõ rệt vị của từng hạt cơm và lòng biết ơn đối với người nấu.",
+          "Thấy rõ quy trình ăn uống diễn ra mà không hề có sự bám víu vào vị ngon."
+        ]
+      },
+      {
+        text: "Sự tỉnh táo mang lại cho bạn:",
+        options: [
+          "Hay bị té ngã, rơi đồ hoặc quên chìa khóa do \"mất hồn\".",
+          "Giảm bớt căng thẳng nhưng thỉnh thoảng vẫn bị cảm xúc dẫn đi chơi xa.",
+          "Nhìn thấu bản chất vấn đề, không ai có thể đánh lừa được bạn.",
+          "Trí tuệ sáng ngời, mỗi bước đi đều thấy đời thật đẹp và ý nghĩa."
         ]
       }
     ]
   },
   {
-    id: 2, name: "Kỷ Luật", tag: "Cấu trúc · Định tâm",
+    id: 2, name: "Kỷ Luật", tag: "Định tâm · An định",
     questions: [
       {
-        text: "Khả năng tập trung của bạn khi làm việc sâu (Deep Work):",
+        text: "Khả năng tập trung của bạn khi làm một việc khó hoặc đọc sách hay?",
         options: [
-          "Liên tục bị xao nhãng bởi thông báo, mạng xã hội (dưới 5 phút/lần).",
-          "Cố gắng tập trung nhưng tâm trí hay \"đi chơi\", phải nỗ lực lắm mới quay lại được.",
-          "Có phương pháp (như Pomodoro) và duy trì được khoảng 30-45 phút ổn định.",
-          "Trạng thái \"Dòng chảy\" (Flow), quên thời gian và không bị tác động bởi môi trường."
+          "Làm được 2 phút là phải mở điện thoại check thông báo ngay.",
+          "Tập trung được một lúc nhưng hay bị mấy tiếng động xung quanh phá đám.",
+          "Có thể đắm mình vào công việc hàng giờ mà không hề thấy mệt mỏi.",
+          "Tập trung sâu tới mức không gì có thể làm lay động được tâm trí."
         ]
       },
       {
-        text: "Khi đối diện với một thử thách vật lý khắc nghiệt (như leo núi, lái xe địa hình):",
+        text: "Bạn phản ứng thế nào khi rơi vào một không gian hoàn toàn im lặng?",
         options: [
-          "Hoảng loạn, nhịp thở dồn dập, mất kiểm soát hành vi.",
-          "Gồng cứng người, lo lắng nhưng vẫn cố gắng hoàn thành theo bản năng.",
-          "Điều tiết được nhịp thở, quan sát được sự sợ hãi và điều khiển cơ thể theo kỹ thuật.",
-          "Vững chãi như núi, tâm và thân hợp nhất, di chuyển nhịp nhàng với địa hình."
+          "Thấy sợ hãi, phải bật nhạc hoặc tìm người nói chuyện cho đỡ trống trải.",
+          "Chịu được một lúc rồi bắt đầu bồn chồn, muốn tìm cái gì đó để nghịch.",
+          "Tận hưởng sự im lặng như một liều thuốc quý để nạp lại năng lượng.",
+          "Im lặng là trạng thái tự nhiên của tâm, luôn an ổn dù ở bất cứ đâu."
+        ]
+      },
+      {
+        text: "Bạn đang tập trung làm việc thì tiếng hát karaoke nhà hàng xóm vang lên.",
+        options: [
+          "Nổi khùng, chạy ra mắng mỏ và thấy ngày hôm đó thật tồi tệ.",
+          "Cố gắng chịu đựng nhưng trong lòng đầy sự bực bội, không làm việc nổi.",
+          "Bình thản ghi nhận âm thanh đó và đưa sự chú ý trở về công việc.",
+          "Âm thanh không thể tác động đến sự bình yên sâu thẳm bên trong bạn."
+        ]
+      },
+      {
+        text: "Sự tĩnh lặng giúp ích cho bạn:",
+        options: [
+          "Làm việc gì cũng dở dang vì đầu óc lúc nào cũng tán loạn.",
+          "Có sự điềm tĩnh nhất định nhưng vẫn dễ bị ngoại cảnh \"giật dây\".",
+          "Có khả năng tập trung siêu phàm, giải quyết mọi việc cực nhanh và chuẩn.",
+          "Sở hữu \"tia laser\" trí tuệ, nhìn thấu mọi ngóc ngách của cuộc sống."
         ]
       }
     ]
   },
   {
-    id: 3, name: "Quyết Đoán", tag: "Tư duy · Tri thức",
+    id: 3, name: "Phán Đoán", tag: "Tư duy · Nhận định",
     questions: [
       {
-        text: "Cách bạn giải thích một vấn đề phức tạp cho người khác:",
+        text: "Bạn nghĩ sao về mấy chuyện xui xẻo (mất tiền, bị bồ đá, rớt môn)?",
         options: [
-          "Nói vòng vo, dùng thuật ngữ khó hiểu để che giấu sự mơ hồ của mình.",
-          "Nhắc lại nguyên văn lý thuyết đã học được từ sách vở.",
-          "Có sơ đồ, mô hình và ví dụ thực tế giúp người nghe nắm được cốt lõi.",
-          "Biến kiến thức thành những câu chuyện ẩn dụ đơn giản, ai cũng có thể \"thấy\" ngay."
+          "Do ông trời hành, do cái số nó khổ, do người yêu cũ ám.",
+          "Chắc tại mình ăn ở sao đó, mà nói chung vẫn thấy ức cái lồng ngực.",
+          "Ngồi tính xem mình sai ở đâu, lần sau né thế nào.",
+          "Bình thản đón nhận vì hiểu đời có lúc này lúc kia, hết tiền thì kiếm lại."
         ]
       },
       {
-        text: "Thái độ của bạn đối với những thất bại lặp lại trong quá khứ:",
+        text: "Cách bạn \"hóng\" mấy vụ bóc phốt, drama trên mạng?",
         options: [
-          "Than thân trách phận hoặc đổ lỗi cho hoàn cảnh, thời thế.",
-          "Buồn bã nhưng tự nhủ lần sau sẽ may mắn hơn.",
-          "Phân tích dữ liệu, tìm ra lỗ hổng cấu trúc và thay đổi chiến thuật.",
-          "Nhìn thấy quy luật (Pattern) vận hành của bản ngã và chuyển hóa tận gốc."
+          "Bay vào bình luận nhiệt tình, chọn phe để cãi nhau sống chết cho bõ ghét.",
+          "Xem cho biết rồi đi ra, nhưng lòng vẫn cứ bứt rứt muốn hóng kết quả cuối cùng.",
+          "Nhận ra mấy chuyện thiên hạ mệt óc, không để nó làm phiền ngày vui của mình.",
+          "Coi drama là bài học để thấy con người dễ bị lôi kéo bởi ảo danh như thế nào."
+        ]
+      },
+      {
+        text: "Bỗng dưng bạn trúng số độc đắc 100 tỷ!",
+        options: [
+          "Quẩy banh nóc, bao cả xóm đi bar, nghĩ đời mình từ giờ là vua.",
+          "Mừng rơi nước mắt nhưng lo sợ bị cướp, đêm nằm ôm bao tiền không ngủ được.",
+          "Lên kế hoạch dùng tiền hợp lý, giúp đỡ người thân và làm việc có ích.",
+          "Coi 100 tỷ cũng chỉ là công cụ, tâm vẫn bình thản đi ăn bát phở như mọi ngày."
+        ]
+      },
+      {
+        text: "Kết quả của việc \"hiểu đời\" mang lại cho bạn là:",
+        options: [
+          "Một cái đầu đầy thuyết âm mưu và sự trách móc cả thế giới.",
+          "Đỡ tức tối hơn một tí nhưng vẫn còn hay bị \"lên tăng xông\" đột ngột.",
+          "Một tâm thế vững chãi, ai nói ngả nói nghiêng lòng ta vẫn vững.",
+          "Sự tự do tuyệt đối, không cái gì trên đời này làm khó được mình."
         ]
       }
     ]
   },
   {
-    id: 4, name: "Tài Chính", tag: "Giá trị · Sáng tạo",
+    id: 4, name: "Bối Cảnh", tag: "Ý định · Tâm thiện",
     questions: [
       {
-        text: "Động lực thực sự khiến bạn làm công việc hiện tại:",
+        text: "Bạn đi làm từ thiện hoặc giúp người nghèo với mục đích gì?",
         options: [
-          "Chẳng có động lực nào, chỉ làm vì phải kiếm sống qua ngày.",
-          "Làm vì danh vọng, chức vụ hoặc để người khác nể phục.",
-          "Làm vì yêu thích công việc và muốn chứng tỏ năng lực bản thân.",
-          "Làm vì thấy công việc này giải quyết được một nỗi đau của xã hội, là sứ mệnh của mình."
+          "Để chụp ảnh check-in, đăng Facebook kiếm nghìn like cho thiên hạ nể.",
+          "Sợ sau này mình khổ nên giờ lo \"tích đức\" cho chắc ăn.",
+          "Thực lòng thấy thương người nên muốn giúp, không cần ai phải cảm ơn.",
+          "Giúp người để tập tính rộng lượng, không còn ích kỷ hay bám giữ tiền bạc."
         ]
       },
       {
-        text: "Thái độ đối với chất lượng sản phẩm/kết quả công việc:",
+        text: "Bạn nghĩ gì khi thấy đứa mình \"ghét cay ghét đắng\" bị sếp mắng?",
         options: [
-          "Làm đối phó, xong việc là xong chuyện, không quan tâm hậu quả.",
-          "Làm tốt ở mức tròn vai, không sai sót là được.",
-          "Tỉ mỉ, kiểm tra kỹ lưỡng và luôn muốn tối ưu hóa kết quả.",
-          "Đưa cả tâm hồn vào sản phẩm, mỗi kết quả là một tác phẩm nghệ thuật/di sản."
+          "\"Đáng đời lắm!\", cười thầm trong bụng cả ngày.",
+          "Thấy cũng hơi tội nhưng thôi kệ, ai bảo nó trước đây gây hấn với mình.",
+          "Thấy thương hại vì biết nó cũng đang áp lực, mong nó ổn hơn.",
+          "Chúc nó sớm vượt qua và trở nên dễ tính, dễ thương hơn cho cả phòng được nhờ."
+        ]
+      },
+      {
+        text: "Bạn đang xếp hàng mua trà sữa thì bị một người \"vô duyên\" chen ngang.",
+        options: [
+          "Gào lên: \"Này cái người kia!\", muốn động tay chân cho họ biết tay mình.",
+          "Nhịn cho xong nhưng trong lòng chửi thầm cả dòng họ nhà họ.",
+          "Nhắc nhở lịch sự, nếu họ vẫn lỳ thì thôi nhường luôn vì không muốn bực mình.",
+          "Mỉm cười nhường chỗ, coi như giúp một người đang vội, lòng vẫn nhẹ thênh."
+        ]
+      },
+      {
+        text: "Tư duy \"mát tính\" giúp bạn:",
+        options: [
+          "Có thêm nhiều kẻ thù và nếp nhăn vì hay cáu kỉnh.",
+          "Được tiếng là hiền nhưng thực ra bên trong vẫn là \"núi lửa\" chờ ngày phun trào.",
+          "Có rất nhiều bạn tốt và lòng luôn cảm thấy nhẹ nhõm.",
+          "Cái đầu không còn chứa rác, chỉ toàn sự bình yên và vui vẻ."
         ]
       }
     ]
   },
   {
-    id: 5, name: "Giao Tiếp", tag: "Kết nối · Lắng nghe",
+    id: 5, name: "Giao Tiếp", tag: "Kết nối · Lời nói",
     questions: [
       {
-        text: "Trạng thái của bạn khi lắng nghe người khác:",
+        text: "Bạn thấy phong cách nói chuyện của mình thế nào?",
         options: [
-          "Nghe để đợi họ dứt lời là mình nhảy vào phản biện hoặc kể chuyện của mình.",
-          "Nghe nhưng tay vẫn bấm điện thoại hoặc mắt nhìn đi chỗ khác.",
-          "Lắng nghe chăm chú, ghi nhận từ ngữ và gật đầu phản hồi.",
-          "Lắng nghe sâu (Deep Listening), nghe được cả những điều họ không nói ra bằng lời."
+          "\"Thẳng như ruột ngựa\", chửi cho sướng mồm (mặc kệ người ta đau đớn).",
+          "Hay hóng chuyện rồi đi kể cho hội chị em \"để mọi người cùng rút kinh nghiệm\".",
+          "Luôn cân nhắc lời nói sao cho thật nhưng vẫn dễ nghe, không làm đau ai.",
+          "Chỉ nói khi cần thiết, lời nói có sức nặng và luôn mang tính xây dựng."
         ]
       },
       {
-        text: "Cách bạn đưa ra phản hồi (Feedback) cho đồng nghiệp/người thân:",
+        text: "Cách bạn phản hồi một bình luận \"cà khịa\" mình trên mạng?",
         options: [
-          "Chỉ trích gay gắt hoặc nói sau lưng vì sợ va chạm trực tiếp.",
-          "Nói giảm nói tránh đến mức người nghe không hiểu mình muốn gì.",
-          "Góp ý thẳng thắn dựa trên dữ liệu công việc, mang tính xây dựng.",
-          "Giao tiếp trắc ẩn, giúp đối phương nhận ra vấn đề mà vẫn thấy được tôn trọng và khích lệ."
+          "\"Khẩu chiến\" tới bến, dùng từ ngữ thâm độc nhất để đối phương phải khóa trang cá nhân.",
+          "Tức nghẹn họng nhưng im lặng trong sự oán hận ngầm.",
+          "Trả lời lịch sự hoặc phớt lờ vì biết tranh cãi chỉ tổ làm bẩn mình.",
+          "Thấy buồn cười, coi đó là âm thanh vô nghĩa giữa hư không, tâm bất biến."
+        ]
+      },
+      {
+        text: "Bạn tình cờ biết một bí mật \"động trời\" của đứa bạn/đồng nghiệp.",
+        options: [
+          "Kể ngay cho cả văn phòng để chứng tỏ mình là \"trùm tin tức\".",
+          "Giữ trong lòng nhưng thỉnh thoảng nói bóng gió khiến đối phương lo sốt vó.",
+          "Quên luôn chuyện đó vì biết kể ra chỉ gây chia rẽ và làm người ta khổ.",
+          "Coi bí mật đó như không tồn tại, đối xử với họ vẫn tử tế và công tâm."
+        ]
+      },
+      {
+        text: "Lời nói của bạn mang lại kết quả:",
+        options: [
+          "Đi đâu cũng bị người ta đề phòng, xa lánh vì sợ bị \"đâm sau lưng\".",
+          "Có nhiều bè để \"tám\" chuyện nhưng chẳng có ai thực sự tin tưởng mình.",
+          "Đi đâu cũng được yêu mến, lời nói như rót mật vào tai mọi người.",
+          "Trở thành người đáng tin cậy nhất, nói lời nào là tháo gỡ khó khăn lời đó."
         ]
       }
     ]
   },
   {
-    id: 6, name: "Hành Động", tag: "Nỗ lực · Kỷ luật",
+    id: 6, name: "Năng Lực", tag: "Hành xử · Chính trực",
     questions: [
       {
-        text: "Phản ứng của bạn khi kế hoạch bị đổ vỡ hoàn toàn:",
+        text: "Tiêu chuẩn hành động của bạn khi ở nơi không có camera hay ai nhìn thấy?",
         options: [
-          "Buông xuôi, bỏ cuộc và chìm đắm trong sự thất vọng.",
-          "Đợi một thời gian cho nguôi ngoai rồi mới dám bắt đầu lại.",
-          "Tìm phương án B ngay lập tức và nỗ lực thực thi để bù đắp thiệt hại.",
-          "Thản nhiên đón nhận, coi đó là dữ liệu để điều chỉnh hành trình, hành động ngay không do dự."
+          "Tiện tay \"mượn luôn\" đồ công ty về dùng, nghĩ sếp giàu chắc không để ý.",
+          "Không làm bậy vì sợ bị bắt quả tang hoặc bị \"quả báo\" bất ngờ.",
+          "Tự nguyện làm việc tốt và tử tế vì lương tâm mình mách bảo.",
+          "Mọi hành vi đều tử tế, không làm đau bất cứ ai dù là vô tình."
         ]
       },
       {
-        text: "Kỷ luật bản thân trong việc nâng cấp chính mình:",
+        text: "Bạn làm gì với mấy con muỗi, gián lẩn quẩn trong phòng?",
         options: [
-          "Không có nhu cầu học hỏi, hài lòng với những gì đang có.",
-          "Có ý định học nhưng luôn trì hoãn vì \"không có thời gian\".",
-          "Lập thời khóa biểu và ép mình thực hiện dù có mệt mỏi.",
-          "Học hỏi là hơi thở, việc rèn luyện diễn ra tự nhiên trong mọi hoạt động sống."
+          "Đập nghe \"bép\" hoặc xịt thuốc cho chúng chết sạch cho hả dạ.",
+          "Đập chúng rồi thấy hơi tội lỗi nhưng lần sau vẫn đập tiếp theo thói quen.",
+          "Dùng nhang muỗi hoặc tìm cách xua chúng ra ngoài một cách nhẹ nhàng.",
+          "Mỉm cười mắc màn đi ngủ, sống hòa bình với muôn loài."
+        ]
+      },
+      {
+        text: "Thấy một chiếc bóp tiền rơi ngay dưới chân khi đường vắng.",
+        options: [
+          "Lượm ngay, cất túi và đi mua chiếc điện thoại xịn nhất.",
+          "Đấu tranh tư tưởng ghê gớm, định lấy rồi lại thôi vì sợ \"ăn không ngon ngủ không yên\".",
+          "Tìm cách liên hệ hoặc đem giao cho cơ quan chức năng trả lại người mất.",
+          "Thấy tâm tham trỗi dậy liền dập tắt ngay, trả lại tiền là chuyện hiển nhiên."
+        ]
+      },
+      {
+        text: "Hành động đúng đắn giúp bạn:",
+        options: [
+          "Luôn sống trong lo sợ, đêm ngủ hay mơ thấy bị bắt.",
+          "Đời sống ổn nhưng tâm hồn vẫn còn nhiều \"rác\" lo âu.",
+          "Lương tâm trong sạch, đặt lưng xuống là ngủ ngon tới sáng.",
+          "Sống đàng hoàng rạng rỡ, là tấm gương sáng cho mọi người xung quanh."
         ]
       }
     ]
   },
   {
-    id: 7, name: "Niềm Tin", tag: "Ý nghĩa · Định hướng",
+    id: 7, name: "Thực Thi", tag: "Nỗ lực · Ý chí",
     questions: [
       {
-        text: "Bạn định vị mình là ai trong hệ sinh thái xã hội này?",
+        text: "Bạn duy trì việc rèn luyện bản thân như thế nào?",
         options: [
-          "Một nạn nhân của hoàn cảnh, luôn bị xô đẩy bởi dòng đời.",
-          "Một người bình thường cố gắng tìm kiếm hạnh phúc cá nhân.",
-          "Một chiến binh nỗ lực để đạt được những mục tiêu lớn lao.",
-          "Một người dẫn dắt (Life Guide) góp phần hồi sinh sự sống xung quanh."
+          "\"Để mai tính\", lúc nào hứng thì làm, không thì nằm ngủ cho sướng.",
+          "Gồng mình ép xác, làm hùng hục rồi được vài bữa là bỏ cuộc giữa chừng.",
+          "Nỗ lực đều đặn mỗi ngày, bền bỉ và kiên trì từng bước một.",
+          "Nghị lực như hơi thở, luôn tự nhiên hướng về những điều tốt đẹp không ngừng."
         ]
       },
       {
-        text: "Khi nghĩ về cái chết hoặc sự kết thúc:",
+        text: "Khi một ý nghĩ \"xấu tính\" trỗi lên (như định nói xấu ai đó)?",
         options: [
-          "Sợ hãi, né tránh và không dám đối diện.",
-          "Thấy hoang mang vì chưa làm được gì đáng kể cho đời.",
-          "Chấp nhận và cố gắng hoàn thành nốt các mục tiêu còn dang dở.",
-          "Tự tại, vì mỗi phút giây hiện tại đã là một đời sống trọn vẹn và ý nghĩa."
+          "Nuôi dưỡng nó, thêm mắm dặm muối cho hấp dẫn để đi kể.",
+          "Biết nó không tốt nhưng vẫn để nó chiếm lấy đầu óc một lúc lâu.",
+          "Lập tức hướng suy nghĩ sang việc khác hoặc dập tắt nó ngay từ đầu.",
+          "Chỉ nhìn nó xuất hiện rồi biến mất như đám mây, không để nó làm phiền."
+        ]
+      },
+      {
+        text: "Bạn quyết tâm dậy sớm 5h sáng để tập thể dục nhưng trời mưa lạnh.",
+        options: [
+          "Tắt báo thức ngay giây đầu tiên và ngủ tiếp tới trưa.",
+          "Dậy được một lúc rồi lại chui vào chăn nằm vì thấy nản.",
+          "Kiên trì rời khỏi giường, tập trong nhà và thấy tự hào về bản thân.",
+          "Việc dậy sớm là niềm vui tự nhiên, dù thời tiết thế nào cũng không ngăn được."
+        ]
+      },
+      {
+        text: "Sự nỗ lực mang lại cho bạn kết quả:",
+        options: [
+          "Sự giậm chân tại chỗ và cảm giác thất bại về chính mình.",
+          "Có vài thay đổi nhỏ nhưng tính tình vẫn \"nắng mưa thất thường\".",
+          "Một ý chí sắt đá và khả năng làm chủ cuộc đời mình.",
+          "Sức mạnh phi thường để vượt qua mọi thói quen xấu lâu đời."
         ]
       }
     ]
   },
   {
-    id: 8, name: "Cảm Xúc", tag: "Cảm nhận · Nội tâm",
+    id: 8, name: "Mục Đích", tag: "Nghề nghiệp · Sứ mệnh",
     questions: [
       {
-        text: "Khi đứng trước một khung cảnh thiên nhiên hùng vĩ tại Mũi Dinh:",
+        text: "Bạn chọn công việc dựa trên tiêu chí nào là chính?",
         options: [
-          "Việc đầu tiên là lôi điện thoại ra chụp ảnh, quay phim để đăng mạng xã hội.",
-          "Thấy đẹp nhưng tâm trí vẫn vương vấn những email chưa trả lời.",
-          "Dành vài phút hít thở, cảm nhận gió cát bằng mọi giác quan rồi mới chụp ảnh.",
-          "Hiện diện trọn vẹn, tan chảy vào không gian, không còn nhu cầu ghi hình lại."
+          "Chỗ nào nhiều tiền, nhàn hạ, có \"lách luật\" một tí để giàu nhanh cũng chơi.",
+          "Nghề nào cũng được, miễn xã hội nhìn vào thấy sang và có thu nhập ổn.",
+          "Nghề chân chính, không lừa đảo, không làm hại con người và môi trường.",
+          "Nghề vừa nuôi thân vừa đem lại niềm vui và sự tử tế cho cộng đồng."
         ]
       },
       {
-        text: "Khả năng xử lý cảm xúc tiêu cực (giận dữ, lo âu):",
+        text: "Khi sếp yêu cầu bạn làm chuyện \"mờ ám\" để tăng doanh thu nhanh?",
         options: [
-          "Bị cảm xúc cuốn đi, có những hành vi hoặc lời nói gây tổn thương.",
-          "Cố gắng kìm nén, \"gồng\" để tỏ ra mình ổn nhưng bên trong vẫn cháy âm ỉ.",
-          "Nhận diện được cảm xúc ngay khi nó khởi phát và dùng hơi thở để làm dịu.",
-          "Quan sát cảm xúc như một vị khách ghé thăm, thấu hiểu nguyên nhân và mỉm cười chào nó."
+          "Làm nhiệt tình để lấy lòng sếp và mong được thưởng thêm hoa hồng.",
+          "Miễn cưỡng làm trong sự sợ hãi và cắn rứt khôn nguôi.",
+          "Thẳng thắn từ chối và sẵn sàng tìm việc khác để bảo vệ sự chính trực.",
+          "Dùng sự thông minh để đề xuất phương án kinh doanh tử tế mà vẫn có lời."
+        ]
+      },
+      {
+        text: "Bạn kinh doanh quán ăn và biết có loại phụ gia rẻ nhưng không tốt cho sức khỏe.",
+        options: [
+          "Dùng ngay để tối ưu lợi nhuận, \"khuất mắt trông coi\" thôi mà.",
+          "Pha trộn một ít cho đỡ tốn, tự an ủi \"chắc người ta ăn cũng không sao\".",
+          "Chỉ dùng nguyên liệu sạch, dù lời ít hơn nhưng khách được khỏe mạnh.",
+          "Coi mỗi món ăn là một món quà sức khỏe và niềm vui gửi đến thực khách."
+        ]
+      },
+      {
+        text: "Nghề nghiệp mang lại cho bạn kết quả:",
+        options: [
+          "Nhiều tiền nhưng lúc nào cũng lo bị thanh tra hoặc bị quả báo.",
+          "Có sự ổn định vật chất nhưng tâm hồn chẳng mấy khi thấy vui vẻ thực sự.",
+          "Sự tôn trọng của cộng đồng và sự thảnh thơi thực sự trong lòng.",
+          "Đi làm mà vui như đi chơi, công việc chính là niềm hạnh phúc."
         ]
       }
     ]
@@ -712,11 +856,11 @@ const levelLabels = ["Mầm · Khởi phát", "Lá · Đang phát triển", "Hoa
 const levelColors  = ["level-1","level-2","level-3","level-4"];
 
 const totalMessages = [
-  { max: 20, msg: "Bạn đang đứng ở ngưỡng cửa — hành trình thức tỉnh bắt đầu từ nhận ra mình." },
-  { max: 32, msg: "Những hạt giống ý thức đang nảy mầm — tiếp tục quan sát và nuôi dưỡng." },
-  { max: 44, msg: "Bạn đang bước vào vùng sáng — hãy vững tin và đi sâu hơn vào nội tâm." },
-  { max: 56, msg: "Tâm hoa đang nở — chia sẻ ánh sáng này với những người xung quanh." },
-  { max: 64, msg: "Bạn đã chạm đến sự viên mãn — hãy trở thành ngọn đuốc cho hành trình của người khác." }
+  { max: 40,  msg: "Bạn đang đứng ở ngưỡng cửa — hành trình thức tỉnh bắt đầu từ nhận ra mình." },
+  { max: 64,  msg: "Những hạt giống ý thức đang nảy mầm — tiếp tục quan sát và nuôi dưỡng." },
+  { max: 88,  msg: "Bạn đang bước vào vùng sáng — hãy vững tin và đi sâu hơn vào nội tâm." },
+  { max: 112, msg: "Tâm hoa đang nở — chia sẻ ánh sáng này với những người xung quanh." },
+  { max: 128, msg: "Bạn đã chạm đến sự viên mãn — hãy trở thành ngọn đuốc cho hành trình của người khác." }
 ];
 
 let currentSection = 0;
@@ -789,7 +933,8 @@ function updateProgress() {
   const pct = (currentSection / sections.length) * 100;
   document.getElementById('progress-fill').style.width = pct + '%';
   document.getElementById('progress-label').textContent = `Phần ${currentSection+1} / ${sections.length}`;
-  document.getElementById('progress-count').textContent = `${answered} / ${sections.length * 2}`;
+  const totalQs = sections.reduce((a, s) => a + s.questions.length, 0);
+  document.getElementById('progress-count').textContent = `${answered} / ${totalQs}`;
 }
 
 function goToSection(idx) {
@@ -895,7 +1040,7 @@ function showResults() {
     total += secScore;
     const maxSec = sec.questions.length * 4;
     const pct    = (secScore / maxSec) * 100;
-    const level  = secScore <= 2 ? 0 : secScore <= 4 ? 1 : secScore <= 6 ? 2 : 3;
+    const level  = secScore <= 5 ? 0 : secScore <= 9 ? 1 : secScore <= 13 ? 2 : 3;
 
     const card = document.createElement('div');
     card.className = 'result-card';
@@ -991,7 +1136,7 @@ function showResults() {
 }
 
 async function exportData() {
-  const scriptUrl = 'https://script.google.com/macros/s/AKfycbxUPDwiJNECjYBdOMIeG3G7vPP7ZtYIgL3C-fmcUBbCNIVtiAh_VVOVVrXwiyMnbju0/exec';
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbx2vvZgBCRIvi7rpt3x1KmEw5hgMZVY4NgEpzR87cAynEuWq9RNHShKCbJMMEIx1PJN/exec';
 
   const scores = sections.map((sec, si) => {
     let s = 0;
