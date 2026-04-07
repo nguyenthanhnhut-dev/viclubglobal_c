@@ -409,7 +409,7 @@
 
   <div id="intro">
     <p class="intro-text">
-      Khảo sát này giúp bạn nhìn nhận mức độ phát triển nội tâm qua <strong style="color:var(--lotus-light)">8 trụ cột</strong> của mô hình LEP. Mỗi câu hỏi có 4 mức độ — hãy chọn đáp án phản ánh trung thực nhất trạng thái hiện tại của bạn.
+      Khảo sát này giúp bạn nhìn nhận mức độ phát triển nội tâm qua <strong style="color:var(--lotus-light)">8 chỉ số</strong> của mô hình LEP. Mỗi câu hỏi có 4 mức độ — hãy chọn đáp án phản ánh trung thực nhất trạng thái hiện tại của bạn.
     </p>
     <div class="intro-pillars">
       <div class="pillar-chip"><span class="pillar-chip-name">Nhận Thức</span></div>
@@ -501,7 +501,7 @@
     <div class="results-header">
       <div class="ornament">✦ Kết Quả ✦</div>
       <h2 class="results-title">Hồ Sơ Nội Tâm</h2>
-      <p class="results-subtitle">Dưới đây là bức tranh toàn cảnh về 8 trụ cột của bạn</p>
+      <p class="results-subtitle">Dưới đây là bức tranh toàn cảnh về 8 chỉ số của bạn</p>
     </div>
     <div class="user-info-card" id="user-info-card"></div>
     <div class="total-score-wrap" id="total-score-wrap">
@@ -511,7 +511,7 @@
       <div class="total-message" id="total-message"></div>
     </div>
     <div class="radar-wrap">
-      <div class="radar-title">Biểu Đồ Radar · 8 Trụ Cột</div>
+      <div class="radar-title">Biểu Đồ Radar · 8 Chỉ Số</div>
       <div class="radar-canvas-wrap"><canvas id="radarChart"></canvas></div>
     </div>
     <div class="results-grid" id="results-grid"></div>
@@ -855,6 +855,9 @@ const sections = [
 const levelLabels = ["Mầm · Khởi phát", "Lá · Đang phát triển", "Hoa · Vững trưởng", "Quả · Tỉnh thức"];
 const levelColors  = ["level-1","level-2","level-3","level-4"];
 
+const METRIC_ORDER = ["NHẬN THỨC", "KỶ LUẬT", "PHÁN ĐOÁN", "BỐI CẢNH", "GIAO TIẾP", "NĂNG LỰC", "THỰC THI", "MỤC ĐÍCH"];
+const DISPLAY_NAMES = ["Nhận Thức", "Kỷ Luật", "Phán Đoán", "Bối Cảnh", "Giao Tiếp", "Năng Lực", "Thực Thi", "Mục Đích"];
+
 const totalMessages = [
   { max: 40,  msg: "Bạn đang đứng ở ngưỡng cửa — hành trình thức tỉnh bắt đầu từ nhận ra mình." },
   { max: 64,  msg: "Những hạt giống ý thức đang nảy mầm — tiếp tục quan sát và nuôi dưỡng." },
@@ -1080,7 +1083,7 @@ function showResults() {
     window._radarChart = new Chart(ctx, {
       type: 'radar',
       data: {
-        labels: sections.map(s => s.name),
+        labels: METRIC_ORDER,
         datasets: [{
           label: 'Điểm số',
           data: scores,
@@ -1104,8 +1107,8 @@ function showResults() {
         },
         scales: {
           r: {
-            min: 0, max: 8,
-            ticks: { stepSize: 2, color: 'rgba(138,132,153,0.7)', font: { size: 10, family: 'Be Vietnam Pro' }, backdropColor: 'transparent' },
+            min: 0, max: 16,
+            ticks: { stepSize: 4, color: 'rgba(138,132,153,0.7)', font: { size: 10, family: 'Be Vietnam Pro' }, backdropColor: 'transparent' },
             grid: { color: 'rgba(201,151,90,0.12)' },
             angleLines: { color: 'rgba(201,151,90,0.15)' },
             pointLabels: {
@@ -1123,8 +1126,8 @@ function showResults() {
             titleFont: { family: 'Be Vietnam Pro', size: 13, weight: '600' },
             bodyFont: { family: 'Be Vietnam Pro', size: 13 }, padding: 12,
             callbacks: {
-              title: (items) => sections[items[0].dataIndex].name + ' · ' + sections[items[0].dataIndex].tag,
-              label: (item) => `  Điểm: ${item.raw} / 8`
+              title: (items) => METRIC_ORDER[items[0].dataIndex] + ' · ' + sections[items[0].dataIndex].tag,
+              label: (item) => `  Điểm: ${item.raw} / 16`
             }
           }
         }
@@ -1136,7 +1139,7 @@ function showResults() {
 }
 
 async function exportData() {
-  const scriptUrl = 'https://script.google.com/macros/s/AKfycbx2vvZgBCRIvi7rpt3x1KmEw5hgMZVY4NgEpzR87cAynEuWq9RNHShKCbJMMEIx1PJN/exec';
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbwdWZF1qFOu509nzCbLxCEe2-m6rH0Bab0bcz_pkteDslLFDsvmUGJjDtELRRiO2j-P/exec';
 
   const scores = sections.map((sec, si) => {
     let s = 0;
@@ -1148,11 +1151,29 @@ async function exportData() {
 
   const sectionResults = sections.map((sec, i) => {
     const score = scores[i];
-    const li = score <= 2 ? 0 : score <= 4 ? 1 : score <= 6 ? 2 : 3;
-    return { name: sec.name, tag: sec.tag, score, max: sec.questions.length * 4, level: li, levelLabel: levelLabels[li] };
+    const li = score <= 5 ? 0 : score <= 9 ? 1 : score <= 13 ? 2 : 3;
+    return {
+      name: METRIC_ORDER[i],
+      displayName: sec.name,
+      tag: sec.tag,
+      score,
+      max: sec.questions.length * 4,
+      level: li,
+      levelLabel: levelLabels[li]
+    };
   });
 
-  const payload = { userInfo, scores, sectionResults, total, totalMsg, radarBase64: window._radarBase64, timestamp: new Date().toLocaleString('vi-VN') };
+  const scoreMap = Object.fromEntries(sectionResults.map(item => [item.name, item.score]));
+  const payload = {
+    userInfo,
+    scores,
+    sectionResults,
+    scoreMap,
+    total,
+    totalMsg,
+    radarBase64: window._radarBase64,
+    timestamp: new Date().toLocaleString('vi-VN')
+  };
 
   try {
     await fetch(scriptUrl, { method: 'POST', body: new URLSearchParams({ data: JSON.stringify(payload) }), redirect: 'follow' });
